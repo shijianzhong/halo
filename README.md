@@ -1,3 +1,9 @@
+<!--
+ * @Date: 2022-12-18 20:33:20
+ * @LastEditors: 史建忠 shijianzhongg@icloud.com
+ * @LastEditTime: 2022-12-18 20:34:42
+ * @FilePath: /halo/README.md
+-->
 <p align="center">
     <a href="https://halo.run" target="_blank" rel="noopener noreferrer">
         <img width="100" src="https://halo.run/logo" alt="Halo logo" />
@@ -24,15 +30,8 @@
 ## 快速开始
 
 ```bash
-docker run \
-  -it -d \
-  --name halo \
-  -p 8090:8090 \
-  -v ~/.halo2:/root/.halo2 \
-  -e HALO_EXTERNAL_URL=http://localhost:8090/ \
-  -e HALO_SECURITY_INITIALIZER_SUPERADMINUSERNAME=admin \
-  -e HALO_SECURITY_INITIALIZER_SUPERADMINPASSWORD=P@88w0rd \
-  halohub/halo:2.0
+docker run -it -d --name halo-next -p 8090:8090 -v ~/.halo2:/root/.halo2 --restart=unless-stopped halohub/halo:2.0.1
+
 ```
 
 以上仅作为体验使用，详细部署文档请查阅：<https://docs.halo.run/getting-started/install/docker-compose>
